@@ -1,11 +1,15 @@
 /* variable */
-$font-base-stack: ('Lato','Noto Sans KR',sans-serif);
-$standard-easing: cubic-bezier(0.4, 0, 0.2, 1);
+// $font-base-stack: ('Lato','Noto Sans KR',sans-serif);
+// $standard-easing: cubic-bezier(0.4, 0, 0.2, 1);
 
-$break-min: (320px);
-$break-tablet: (768px);
-$break-desktop: (1200px);
-$break-responsible: (1280px);
+// $break-min: (320px);
+// $break-tablet: (768px);
+// $break-desktop: (1200px);
+// $break-responsible: (1280px);
 
-$max-desktop: (1920px);
-$min-desktop: (1448px);
+// $max-desktop: (1920px);
+// $min-desktop: (1448px);
+
+.c-primary {
+    color:#007DFA;
+}
