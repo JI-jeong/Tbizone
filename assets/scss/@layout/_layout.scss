@@ -14,27 +14,6 @@
 	background-repeat: no-repeat;
 	background-image: url('../img/logo.svg');
 }
-.aside {
-	position: fixed;
-	top:90px;
-	left:0;
-	width:240px;
-	height:calc(100% - 90px); 
-	box-shadow: 6px 12px 18px rgba(0, 0, 0, 0.1);
-	border-radius: 0 24px 0 0;
-	overflow: hidden;
-	.company{
-		display: flex;
-		align-items: center;
-		height: 90px;
-		background-color: #6C78B5;
-	}
-	.aside-nav {
-		height:calc(100% - 90px);
-		background-color: #fff;
-	}
-}
-
 .container {
 
 	padding-top:90px;
