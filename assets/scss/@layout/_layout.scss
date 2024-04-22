@@ -2,7 +2,6 @@
 
 .wrap {
 	height:100%;
-	overflow: visible;
 	background-color: #0C1E5B;
 }
 .logo {
@@ -15,7 +14,6 @@
 	background-image: url('../img/logo.svg');
 }
 .container {
-
 	padding-top:90px;
 	height: 100%;
 }
@@ -29,6 +27,8 @@
 .contents {
 	height: calc(100% - 90px);
 	padding-left:240px;
+	overflow-x: hidden;
+	overflow-y: auto;
 }
 .contents-top {
 	.nav-tab {
