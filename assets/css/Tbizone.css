@@ -273,6 +273,10 @@ a {
   text-decoration: none;
 }
 
+[type=button] {
+  cursor: pointer;
+}
+
 @font-face {
   font-family: "Pretendard";
   font-weight: 900;
@@ -645,7 +649,6 @@ a {
   line-height: 22px;
   color: #666;
   font-weight: 600;
-  cursor: pointer;
 }
 .tab-group .tab-buttons.active {
   color: #007DFA;
@@ -667,7 +670,6 @@ a {
   border: 1px solid #E4E4E7;
   border-radius: 4px;
   height: 40px;
-  cursor: pointer;
 }
 .dropdown .toggle-buttons::after {
   content: "";
@@ -792,7 +794,6 @@ a {
   font-size: 14px;
   color: #333;
   height: 24px;
-  cursor: pointer;
 }
 .docs-wrap .docs-tab .sort-group .sort-buttons .ico {
   width: 24px;
@@ -894,11 +895,21 @@ a {
   display: inline-block;
   width: 24px;
   height: 24px;
-  cursor: pointer;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41421 6C0.523309 6 0.0771418 4.92286 0.707107 4.29289L4.29289 0.707107C4.68342 0.316583 5.31658 0.316583 5.70711 0.707107L9.29289 4.29289C9.92286 4.92286 9.47669 6 8.58579 6L1.41421 6Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+  transform: rotate(180deg);
   margin-left: 6px;
+  pointer-events: none;
+}
+.docs-wrap .docs-toggle .doc-list-toggle.active::after {
+  transform: rotate(0deg);
+}
+.docs-wrap .doc-list {
+  display: none;
+}
+.docs-wrap .doc-list.show {
+  display: block;
 }
 .docs-wrap .doc-list .doc-items {
   display: flex;

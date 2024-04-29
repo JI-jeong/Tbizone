@@ -21,7 +21,6 @@
 				font-size:14px;
 				color:#333;
 				height:24px;
-				cursor: pointer;
 				.ico {
 					width:24px;
 					height:24px;
@@ -121,15 +120,23 @@
 				display: inline-block;
 				width:24px;
 				height:24px;
-				cursor: pointer;
 				background-position: center;
 				background-repeat: no-repeat;
 				background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.41421 6C0.523309 6 0.0771418 4.92286 0.707107 4.29289L4.29289 0.707107C4.68342 0.316583 5.31658 0.316583 5.70711 0.707107L9.29289 4.29289C9.92286 4.92286 9.47669 6 8.58579 6L1.41421 6Z' fill='%23333333'/%3E%3C/svg%3E%0A");
+				transform: rotate(180deg);
 				margin-left:6px;
+				pointer-events: none;
+			}
+			&.active::after {
+				transform: rotate(0deg);
 			}
 		}
 	}
 	.doc-list {
+		display: none;
+		&.show{
+			display:block;
+		}
 		.doc-items {
 			display: flex;
 			align-items: center;

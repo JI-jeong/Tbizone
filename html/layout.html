@@ -97,9 +97,9 @@
 							<div class="form-chk">
 								<input type="checkbox" id="chk1" checked /><label for="chk1">승인 필요 문서 <span class="c-primary">4</span></label>
 							</div>
-							<button type="button" class="doc-list-toggle">접기</button>
+							<button type="button" class="doc-list-toggle active">접기</button>
 						</div>
-						<ul class="doc-list">
+						<ul class="doc-list show">
 							<li>
 								<div class="doc-items">
 									<div class="thum"><i class="thum-img img01"></i></div>
@@ -233,4 +233,17 @@
 			</div>
 		</div>
 	</body>
+	<script>
+		$('.doc-list-toggle').on('click', function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+				$(this).text('열기');
+				$('.doc-list').removeClass('show');
+			} else {
+				$(this).addClass('active');
+				$(this).text('접기');
+				$('.doc-list').addClass('show');
+			}
+		});
+	</script>
 </html>
