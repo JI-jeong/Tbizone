@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<title>Tbizone</title>
+		<!--jquery-->
+		<script src="../assets/js/jquery-3.6.4.min.js"></script>
+		<script src="../assets/js/jquery-ui.min.js"></script>
+		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="../assets/js/Tbizone.ui.js"></script>
+		<!--css-->
+		<link rel="stylesheet" href="../assets/css/Tbizone.min.css">
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="logo"></div>
+			<aside class="aside" aria-expanded="true">
+				<div class="company">
+					<div class="thum"></div>
+					<div class="name">탑벨정보</div>
+				</div>
+				<div class="aside-nav">
+					<div class="user-info">
+						<div class="thum">
+							<img src="../assets/img/_temp/_temp.thum.png" alt="홍길동" />
+						</div>
+						<div class="name">홍길동</div>
+					</div>
+					<nav class="nav-lnb">
+						<ul>
+							<li><a href="#" class="lnb-items active"><i class="ico lnb01"></i>전자결재</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb02"></i>메일</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb03"></i>일정관리</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb04"></i>자원관리</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb05"></i>게시판</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb06"></i>마이페이지</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb07"></i>환경설정</a></li>
+						</ul>
+					</nav>
+					<button type="button" class="lnb-toggle"></button>
+				</div>
+			</aside>
+			<div class="container">
+				<div class="contents-top">
+					<ul class="nav-tab">
+						<li class="nav-items active"><a href="#" class="nav-link">내 문서함</a></li>
+						<li class="nav-items"><a href="#" class="nav-link">회사 문서함</a></li>
+					</ul>
+					<div class="button-group">
+						<button type="button" class="buttons" data-size="big" data-color="base">문서 양식 관리</button>
+						<button type="button" class="buttons" data-size="big" data-color="blue">문서 작성하기</button>
+					</div>
+				</div>
+				<main class="contents">
+					<div class="docs-wrap">
+						<button class="buttons" data-size="mid" data-color="base" data-toggle="modal" data-target="popup1">휴직신청</button><br />
+						<button class="buttons" data-size="mid" data-color="base" data-toggle="modal" data-target="popup2">경조비승인</button>
+					</div>
+				</main>
+			</div>
+			
+		</div>
+		<div id="popup1" class="modal" role="dialog">
+			<div class="modal-popup">
+				<div class="modal-container">
+					<div class="modal-header">
+						<div class="modal-utility">
+							<div class="badge-group">
+								<label class="badge" data-color="blue">작성하기</label>
+							</div>
+							<div class="button-group">
+								<button type="button" class="buttons"><i class="ico share">share</i></button>
+								<button type="button" class="buttons"><i class="ico grid">grid</i></button>
+								<button type="button" class="buttons"><i class="ico expand">expand</i></button>
+								<button type="button" class="modal-button-closed">closed</button>
+							</div>
+						</div>
+						<h2 class="modal-title">휴직신청</h2>
+						<p class="sub-txt">아래 양식에 맞추어 신청해 주세요.</p>
+					</div>
+					<div class="modal-contents" data-width="mid">
+						<div class="confirm-form">
+							<div class="form-items">
+								<label><i class="ico calendar"></i>휴직 시작일</label>
+								<div class="datepicker">
+									<input type="text" placeholder="날짜를 입력해 주세요."/><button type="button" class="buttons">선택</button>
+								</div>
+							</div>
+							<div class="form-items">
+								<label><i class="ico calendar"></i>휴직 종료일</label>
+								<div class="datepicker">
+									<input type="text" placeholder="날짜를 입력해 주세요."/><button type="button" class="buttons">선택</button>
+								</div>
+							</div>
+							<div class="form-items">
+								<label><i class="ico docs"></i>휴직사유</label>
+								<div class="form-inp">
+									<input type="text" placeholder="내용을 입력해 주세요."/>
+								</div>
+							</div>
+							<div class="form-items">
+								<label><i class="ico docs"></i>비고</label>
+								<div class="form-inp">
+									<input type="text" placeholder="내용을 입력해 주세요."/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="button-group">
+							<button type="button" class="buttons" data-size="lg" data-color="blue">작성하기</button>
+						</div>
+					</div>
+				</div>
+				<div class="modal-aside">
+					<div class="confirm-aside">
+						<h3 class="aside-title">승인·참조</h3>
+						<div class="confirm-step">
+							<div class="step-top">
+								<h4>1단계</h4>
+								<button type="button" class="buttons"><i class="ico plus">추가</i></button>
+							</div>
+							<ul class="list">
+								<li>
+									<div class="thum"></div>
+									<div class="info">
+										<strong class="name">대상없음</strong>
+										<span>승인참조 대상을 선택해 주세요.</span>
+									</div>
+								</li>
+							</ul>
+							<div class="button-group">
+								<button type="button" class="buttons" data-color="gray">단계추가하기</button>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="popup2" class="modal active" role="dialog">
+			<div class="modal-popup">
+				<div class="modal-container">
+					<div class="modal-header">
+						<div class="modal-utility">
+							<div class="move-group">
+								<button type="button" class="buttons"><i class="ico up">up</i></button>
+								<button type="button" class="buttons"><i class="ico down">down</i></button>
+							</div>
+							<div class="button-area">
+								<div class="button-group">
+									<button type="button" class="buttons"><i class="ico favor">favor</i></button>
+									<button type="button" class="buttons"><i class="ico share">share</i></button>
+									<button type="button" class="buttons"><i class="ico info">info</i></button>
+								</div>
+								<div class="button-group">
+									<button type="button" class="buttons"><i class="ico grid">grid</i></button>
+									<button type="button" class="buttons"><i class="ico expand">expand</i></button>
+									<button type="button" class="modal-button-closed">closed</button>
+								</div>
+							</div>
+						</div>
+						<div class="confirm-state">
+							<label class="badge" data-color="purple">승인필요</label>
+							<span>홍길동님이 승인을 기다리고 있어요.</span>
+						</div>
+						<h2 class="modal-title">경조비 신청</h2>
+						<div class="write-date">2024-12 · 2024. 3. 24(일) 오후 5:42 작성</div>
+						<div class="timeline">
+							<div class="alarm">
+								<div class="thum"><img src="../assets/img/_temp/_temp.thum.png" alt="홍길동"></div>
+								<strong class="name">홍길동</strong>님이 글을 작성했어요.<span class="time">2분전</span>
+							</div>
+							<ul class="history">
+								<li>
+									<p class="row"><i class="ico isolation"></i><strong class="name">홍길동</strong>님이 승인·참조 대상을 변경했어요. <span class="time">2분전</span></p>
+									<ul class="step">
+										<li>1단계 : 없음 → 대표(승인)</li>
+										<li>2단계 : 없음 → 대표(승인)</li>
+									</ul>
+								</li>
+								<li>
+									<p class="row"><i class="ico confirm"></i><strong class="name">홍길동</strong>님이 승인했어요.<span class="time">2분전</span></p>
+								</li>
+							</ul>
+							<div class="replay">
+								<input type="text" placeholder="댓글 입력"/>
+							</div>
+						</div>
+					</div>
+					<div class="modal-contents" data-width="mid">
+						<div class="confirm-form" data-type="list">
+							<div class="form-items">
+								<label><i class="ico check"></i>경조 내용</label>
+								<div class="val"><span class="key">결혼</span></div>
+							</div>
+							<div class="form-items">
+								<label><i class="ico docs"></i>경조 대상자 성명</label>
+								<div class="val">홍길동</div>
+							</div>
+							<div class="form-items">
+								<label><i class="ico docs"></i>관계(본인, 본인의 ㅇㅇ)</label>
+								<div class="val">본인</div>
+							</div>
+							<div class="form-items">
+								<label><i class="ico calendar"></i>경조일</label>
+								<div class="val">2025년 3월 24일</div>
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="button-group">
+							<button type="button" class="buttons" data-size="lg" data-color="gray">반려</button>
+							<button type="button" class="buttons" data-size="lg" data-color="green">승인하기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

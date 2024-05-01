@@ -19,6 +19,15 @@
 		border-radius: 8px;
 		letter-spacing: -0.4px;
 	}
+	&[data-size=lg] {
+		font-size:20px;
+		font-weight:600;
+		padding:0 16px;
+		height:54px;
+		border-radius: 8px;
+		letter-spacing: -0.4px;
+		min-width: 130px;
+	}
 	&[data-size=mid]{
 		font-size:16px;
 		font-weight: 500;
@@ -51,6 +60,11 @@
 		color:#0AAF60;
 		border-color:#B1DFC9;
 		background-color: #CEEFDF;
+	}
+	&[data-color=gray]{
+		background-color: #F1F1F1;
+		border-color: #F1F1F1;
+		color:#333
 	}
 	&:disabled {
 		color:#fff;

@@ -4,6 +4,7 @@
 .docs-wrap {
 	padding:36px 40px;
 	background-color: #fff;
+	min-height:100%;
 	.docs-tab {
 		display: flex;
 		align-items: center;
@@ -258,12 +259,6 @@
 				font-size: 16px;
 				color: #666;
 			}
-		}
-		.buttons[data-size=big] {
-			height:54px;
-			width:130px;
-			font-size:20px;
-			font-weight: 600;
 		}
 	}
 }

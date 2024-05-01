@@ -18,12 +18,12 @@ $(function() {
 	// 		$(this).attr("aria-expanded", "true");
 	// 	}
 	// });//dropdown
-	// $('[data-toggle="modal"]').on('click', function(){
-	// 	$("#" + $(this).attr('data-target')).addClass('active');
-	// });//modal-open
-	// $('.modal').find('.modal-button-closed').on('click', function(){
-	// 	$(this).closest('.modal').removeClass('active');
-	// });//modal-closed
+	$('[data-toggle="modal"]').on('click', function(){
+		$("#" + $(this).attr('data-target')).addClass('active');
+	});//modal-open
+	$('.modal').find('.modal-button-closed').on('click', function(){
+		$(this).closest('.modal').removeClass('active');
+	});//modal-closed
 
 	//aside
 	$('.lnb-toggle').on('click', function(){
