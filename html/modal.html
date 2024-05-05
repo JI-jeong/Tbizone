@@ -55,13 +55,15 @@
 				</div>
 				<main class="contents">
 					<div class="docs-wrap">
-						<button class="buttons" data-size="mid" data-color="base" data-toggle="modal" data-target="popup1">휴직신청</button><br />
-						<button class="buttons" data-size="mid" data-color="base" data-toggle="modal" data-target="popup2">경조비승인</button>
+						<button class="buttons" data-size="mid" data-color="base" data-toggle="modal" data-target="popup1">휴직신청</button><br /><br />
+						<button class="buttons" data-size="mid" data-color="base" data-toggle="modal" data-target="popup2">경조비승인</button><br /><br />
+						<button class="buttons" data-size="mid" data-color="base" data-toggle="modal" data-target="popup3">조직도 설정</button>
 					</div>
 				</main>
 			</div>
 			
 		</div>
+		<!-- 휴직신청 -->
 		<div id="popup1" class="modal" role="dialog">
 			<div class="modal-popup">
 				<div class="modal-container">
@@ -84,14 +86,14 @@
 						<div class="confirm-form">
 							<div class="form-items">
 								<label><i class="ico calendar"></i>휴직 시작일</label>
-								<div class="datepicker">
-									<input type="text" placeholder="날짜를 입력해 주세요."/><button type="button" class="buttons">선택</button>
+								<div class="form-datepicker">
+									<input type="text" placeholder="날짜를 입력해 주세요." class="datepicker"/>
 								</div>
 							</div>
 							<div class="form-items">
 								<label><i class="ico calendar"></i>휴직 종료일</label>
-								<div class="datepicker">
-									<input type="text" placeholder="날짜를 입력해 주세요."/><button type="button" class="buttons">선택</button>
+								<div class="form-datepicker">
+									<input type="text" placeholder="날짜를 입력해 주세요." class="datepicker"/>
 								</div>
 							</div>
 							<div class="form-items">
@@ -140,7 +142,8 @@
 				</div>
 			</div>
 		</div>
-		<div id="popup2" class="modal active" role="dialog">
+		<!-- 경조비승인 -->
+		<div id="popup2" class="modal" role="dialog">
 			<div class="modal-popup">
 				<div class="modal-container">
 					<div class="modal-header">
@@ -214,6 +217,107 @@
 						<div class="button-group">
 							<button type="button" class="buttons" data-size="lg" data-color="gray">반려</button>
 							<button type="button" class="buttons" data-size="lg" data-color="green">승인하기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 조직도 설정 -->
+		<div id="popup3" class="modal" role="dialog">
+			<div class="modal-popup">
+				<div class="modal-container">
+					<div class="modal-header" data-line="no-line">
+						<div class="modal-utility">
+							<h2 class="modal-title">조직도 설정</h2>
+							<div class="button-group">
+								<button type="button" class="buttons"><i class="ico info">info</i></button>
+								<button type="button" class="modal-button-closed">closed</button>
+							</div>
+						</div>
+					</div>
+					<div class="modal-contents" data-width="mid">
+						<div class="org-search">
+							<label>조직 검색</label>
+							<div class="form-inp">
+								<input type="text" />
+							</div>
+							<button type="button" class="buttons" data-size="mid" data-color="blue">조직도 설정</button>
+						</div>
+						<div class="org-tree">
+							<ul>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">전체(9)</div>
+									</div>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">대표</div>
+									</div>
+								</li>
+								<li class="open">
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">이사</div>
+									</div>
+									<ul>
+										<li>
+											<div class="node">
+												<i class="ico-ocl"></i><div class="tree-anchor">영업</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">인사총무</div>
+									</div>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">대외사업부</div>
+									</div>
+								</li>
+								<li class="selected drag open">
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">신기술운영</div>
+										<div class="button-group">
+											<button type="button" class="buttons add">Add</button>
+											<button type="button" class="buttons info">Info</button>
+										</div>
+									</div>
+									<ul>
+										<li>
+											<div class="node">
+												<i class="ico-ocl"></i>
+												<div class="tree-anchor">
+													<div class="tree-edit">
+														<input type="text" placeholder="조직 이름 입력(마케팅팀, 개발1팀 등)" />
+														<div class="enter">
+															<label>입력 후</label>
+															<button type="button" class="buttons">Enter</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">연구개발</div>
+									</div>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">공공운영</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<div class="button-group">
+							<button type="button" class="buttons" data-size="lg" data-color="blue">저장하기</button>
 						</div>
 					</div>
 				</div>

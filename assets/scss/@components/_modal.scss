@@ -45,6 +45,16 @@
 .modal-header {
 	padding:40px 40px 20px;
 	border-bottom:1px solid #ddd;
+	&[data-line=no-line]{
+		border-bottom:none;
+		padding-bottom: 0;
+		.modal-utility{
+			margin-bottom:0;
+		}
+		& + .modal-contents {
+			padding-top:15px;
+		}
+	}
 	.badge {
 		height:32px;
 		padding:0 15px;

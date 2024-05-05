@@ -41,4 +41,25 @@ $(function() {
 		tab.find('.tab-buttons').removeClass('active');
 		$(this).addClass('active');
 	});
+
+	$.datepicker.setDefaults({
+		dateFormat: 'yy.mm.dd',
+		prevText: '이전 달',
+		nextText: '다음 달',
+		monthNames: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+		monthNamesShort: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12'],
+		dayNames: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+		dayNamesShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+		dayNamesMin: ['S', 'M', 'T', 'W', 'T', 'F', 'S'],
+		showMonthAfterYear: true,
+		yearSuffix: '.'
+	}); // datepicker KR
+	$( ".datepicker" ).datepicker({
+		//dateFormat: 'yy-mm-dd(DD)',
+		dateFormat: 'yy-mm-dd',
+		showOn: 'both',
+		buttonImage: "../assets/img/icon_calendar.png",
+		//buttonImageOnly: true,
+		buttonText: "선택하세요"
+	});//datepicker
 });

@@ -66,6 +66,12 @@
 		border-color: #F1F1F1;
 		color:#333
 	}
+	&[data-type=form]{
+		border-radius: 0;
+		color:#fff;
+		background-color: #9096A2;
+		height:34px;
+	}
 	&:disabled {
 		color:#fff;
 		background-color: #9096A2;

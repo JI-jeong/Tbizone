@@ -29,6 +29,10 @@
 	padding-left:240px;
 	overflow-x: hidden;
 	overflow-y: auto;
+	background-color: #fff;
+	& > div {
+		padding:36px 40px;
+	}
 }
 .contents-top {
 	.nav-tab {

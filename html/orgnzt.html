@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<title>Tbizone</title>
+		<!--jquery-->
+		<script src="../assets/js/jquery-3.6.4.min.js"></script>
+		<script src="../assets/js/jquery-ui.min.js"></script>
+		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
+		<script src="../assets/js/Tbizone.ui.js"></script>
+		<!--css-->
+		<link rel="stylesheet" href="../assets/css/Tbizone.min.css">
+		<!--jsTree-->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/jstree.min.js"></script>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="logo"></div>
+			<aside class="aside" aria-expanded="true">
+				<div class="company">
+					<div class="thum"></div>
+					<div class="name">탑벨정보</div>
+				</div>
+				<div class="aside-nav">
+					<div class="user-info">
+						<div class="thum">
+							<img src="../assets/img/_temp/_temp.thum.png" alt="홍길동" />
+						</div>
+						<div class="name">홍길동</div>
+						<div class="badge">5</div>
+					</div>
+					<nav class="nav-lnb">
+						<ul>
+							<li><a href="#" class="lnb-items active"><i class="ico lnb01"></i>전자결재</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb02"></i>메일</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb03"></i>일정관리</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb04"></i>자원관리</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb05"></i>게시판</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb06"></i>마이페이지</a></li>
+							<li><a href="#" class="lnb-items"><i class="ico lnb07"></i>환경설정</a></li>
+						</ul>
+					</nav>
+					<button type="button" class="lnb-toggle"></button>
+				</div>
+			</aside>
+			<div class="container">
+				<div class="contents-top">
+					<ul class="nav-tab">
+						<li class="nav-items active"><a href="#" class="nav-link">내 문서함</a></li>
+						<li class="nav-items"><a href="#" class="nav-link">회사 문서함</a></li>
+					</ul>
+					<div class="button-group">
+						<button type="button" class="buttons" data-size="big" data-color="base">문서 양식 관리</button>
+						<button type="button" class="buttons" data-size="big" data-color="blue">문서 작성하기</button>
+					</div>
+				</div>
+				<main class="contents">
+					<div class="orgnzt-wrap">
+						<div class="orgnzt-top">
+							<h2>조직관리</h2>
+							<div class="form-group">
+								<div class="form-items">
+									<label>회사선택</label>
+									<select>
+										<option>(사)전국지역문화재단</option>
+									</select>
+								</div>
+								<div class="form-items">
+									<label>부서명</label>
+									<div class="form-inp">
+										<input type="text" />
+										<button type="button" class="buttons">search</button>
+									</div>
+								</div>
+								<div class="form-items">
+									<label>사용여부</label>
+									<select>
+										<option>전체</option>
+									</select>
+								</div>
+							</div>
+							<div class="setting">
+								<dl>
+									<dt>부서정보</dt>
+									<dd>
+										<div class="form-chk">
+											<input type="checkbox" id="chk1" />
+											<label for="chk1">사업장 숨김</label>
+										</div>
+									</dd>
+								</dl>
+								<div class="button-group">
+									<button type="button" class="buttons" data-size="mid" data-color="blue">조직도 설정</button>
+									<button type="button" class="buttons" data-size="mid" data-color="base">저장</button>
+									<button type="button" class="buttons" data-size="mid" data-color="base">삭제</button>
+								</div>
+							</div>
+						</div>
+						<div class="orgnzt">
+							<div class="jstree-wrap">
+								<div id="orgMenu"></div>
+							</div>
+							<div class="orgnzt-info">
+								<ul class="tab-group">
+									<li><button type="button" class="tab-buttons active">기본정보</button></li>
+									<li><button type="button" class="tab-buttons">부서원 정보</button></li>
+								</ul>
+								<table class="tb-org">
+									<caption></caption>
+									<colgroup>
+										<col width="180px" />
+										<col width="120px" />
+										<col width="" />
+									</colgroup>
+									<tbody>
+										<tr>
+											<th scope="row"><span class="req">*</span> 상위부서</th>
+											<td colspan="2">
+												<div class="form-inp">
+													<input type="text" value="1000"/>
+													<button type="button" class="buttons" data-size="mid" data-type="form">선택</button>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">유형</th>
+											<td colspan="2">
+												<div class="form-group">
+													<div class="form-items">
+														<select>
+															<option>부서</option>
+														</select>
+													</div>
+													<div class="form-items">
+														<label>상세</label>
+														<select>
+															<option>부서</option>
+														</select>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row"><span class="req">*</span> 부서코드</th>
+											<td colspan="2">
+												<div class="form-inp w160">
+													<input type="text" value="1000"/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="rowgroup" rowspan="4"><span class="req">*</span> 부서명</th>
+											<th scope="row"><span class="req">*</span> 한국어</th>
+											<td>
+												<div class="form-inp">
+													<input type="text" value="사무처"/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">영어</th>
+											<td>
+												<div class="form-inp">
+													<input type="text" value=""/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">일본어</th>
+											<td>
+												<div class="form-inp">
+													<input type="text" value=""/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">중국어</th>
+											<td>
+												<div class="form-inp">
+													<input type="text" value=""/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">부서약칭</th>
+											<td colspan="2">
+												<div class="form-inp">
+													<input type="text" value="사무처"/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">대내수신여부</th>
+											<td colspan="2">
+												<select>
+													<option>사용</option>
+												</select>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">정부기준코드</th>
+											<td colspan="2">
+												<div class="form-inp">
+													<input type="text" value=""/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">발신인명</th>
+											<td colspan="2">
+												<div class="form-inp">
+													<input type="text" value="(사)전국지역문화재단"/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">사용여부</th>
+											<td colspan="2">
+												<div class="radio-group">
+													<div class="form-radio">
+														<input type="radio" id="ra1" name="ra" checked  />
+														<label for="ra1">사용</label>
+													</div>
+													<div class="form-radio">
+														<input type="radio" id="ra2" name="ra"/>
+														<label for="ra2">사용 안함</label>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">정렬</th>
+											<td colspan="2">
+												<div class="form-inp">
+													<input type="text" value="10"/>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th scope="row">주소</th>
+											<td colspan="2">
+												<div class="address">
+													<div class="form-inp">
+														<input type="text" value="12345" class="zipcode"/>
+														<button type="button" class="buttons" data-size="mid" data-type="form">우편번호</button>
+													</div>
+													<div class="form-inp"><input type="text" value="서울 중구 서애로 27(필동3가, 서울캐피털빌딩)"/></div>
+													<div class="form-inp"><input type="text" value="3층 308호 (사)전국지역문화재단연합회"/></div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</main>
+			</div>
+		</div>
+	</body>
+	<script>
+	$(function () {
+		$('#orgMenu').jstree({
+			'core' : {
+				'check_callback': true,
+				'data' : [
+					{
+						"text" : "(사)전국지역문화재단연합회(1000)",
+						"state" : { "opened" : true },
+						"children" : [
+							{
+								"text" : "전국지역문화재단연합회(1000)",
+								"state" : { "opened" : true },
+								//"state" : { "selected" : true },
+								//"icon" : "jstree-file"
+								"children" : [
+									{
+										"text":"사무처(1000)",
+									},
+									{
+										"text":"운영위원회(2000)",
+									},
+									{
+										"text":"그룹웨어 TF팀(10100)",
+									},
+									{
+										"text":"관리부서(1100)",
+										"state" : { "opened" : true },
+										"children" : [
+											{
+												"text":"관리팀(1100)",
+											},
+										]
+									},
+								]
+							},
+							{ 
+								"text" : "관리팀(1100)", 
+								//"state" : { "disabled" : true } 
+							},
+							{ 
+								"text" : "전국지역문화재단연합회(2000)", 
+								//"state" : { "disabled" : true } 
+							}
+						]
+					}
+				]
+			},
+			"plugins" : ["dnd"],
+		});
+	});	
+	</script>
+</html>
