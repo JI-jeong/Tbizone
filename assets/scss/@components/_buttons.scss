@@ -66,6 +66,22 @@
 		border-color: #F1F1F1;
 		color:#333
 	}
+	&[data-color=navy]{
+		background-color: #2D448B;
+		border-color: #2D448B;
+		color:#fff
+	}
+	&[data-color=red]{
+		background-color: #FA4545;
+		border-color: #FA4545;
+		color:#fff
+	}
+	&[data-color=red-line]{
+		background-color: #fff;
+		border-color: #FA4545;
+		color:#FA4545
+	}
+	
 	&[data-type=form]{
 		border-radius: 0;
 		color:#fff;

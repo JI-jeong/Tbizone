@@ -116,6 +116,13 @@
 			font-size:16px;
 			color:#333;
 		}
+		.org-tree-wrap {
+			padding:30px 30px 30px 20px;
+			border:1px solid #ddd;
+			.org-tree {
+				margin:0;
+			}
+		}
 		.orgnzt-info {
 			flex:1;
 			margin-left:40px;
