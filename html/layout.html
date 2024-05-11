@@ -6,17 +6,17 @@
 		<meta name="viewport" content="width=device-width">
 		<title>Tbizone</title>
 		<!--jquery-->
-		<script src="../assets/js/jquery-3.6.4.min.js"></script>
+		<!-- <script src="../assets/js/jquery-3.6.4.min.js"></script>
 		<script src="../assets/js/jquery-ui.min.js"></script>
 		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../assets/js/Tbizone.ui.js"></script>
+		<script src="../assets/js/Tbizone.ui.js"></script> -->
 		<!--css-->
 		<link rel="stylesheet" href="../assets/css/Tbizone.min.css">
 	</head>
 	<body>
 		<div class="wrap">
 			<div class="logo"></div>
-			<aside class="aside" aria-expanded="true">
+			<aside class="aside" aria-expanded="true"> <!--[P] 여닫힘 : aria-expanded="false" 으로 변경-->
 				<div class="company">
 					<div class="thum"></div>
 					<div class="name">탑벨정보</div>
@@ -46,7 +46,7 @@
 			<div class="container">
 				<div class="contents-top">
 					<ul class="nav-tab">
-						<li class="nav-items active"><a href="#" class="nav-link">내 문서함</a></li>
+						<li class="nav-items active"><a href="#" class="nav-link">내 문서함</a></li><!--[P] tab 활성시 active class-->
 						<li class="nav-items"><a href="#" class="nav-link">회사 문서함</a></li>
 					</ul>
 					<div class="button-group">
@@ -58,7 +58,7 @@
 					<div class="docs-wrap">
 						<div class="docs-tab">
 							<div class="tab-group">
-								<button type="button" class="tab-buttons active">진행중</button>
+								<button type="button" class="tab-buttons active">진행중</button><!--[P] tab 활성시 active class-->
 								<button type="button" class="tab-buttons">완료</button>
 								<button type="button" class="tab-buttons">중요</button>
 								<button type="button" class="tab-buttons">전체</button>
@@ -100,7 +100,7 @@
 							</div>
 							<button type="button" class="doc-list-toggle active">접기</button>
 						</div>
-						<ul class="doc-list show">
+						<ul class="doc-list show"><!--[P] 닫힘시 show class 제거-->
 							<li>
 								<div class="doc-items">
 									<div class="thum"><i class="thum-img img01"></i></div>
@@ -235,16 +235,16 @@
 		</div>
 	</body>
 	<script>
-		$('.doc-list-toggle').on('click', function(){
-			if($(this).hasClass('active')){
-				$(this).removeClass('active');
-				$(this).text('열기');
-				$('.doc-list').removeClass('show');
-			} else {
-				$(this).addClass('active');
-				$(this).text('접기');
-				$('.doc-list').addClass('show');
-			}
-		});
+		// $('.doc-list-toggle').on('click', function(){
+		// 	if($(this).hasClass('active')){
+		// 		$(this).removeClass('active');
+		// 		$(this).text('열기');
+		// 		$('.doc-list').removeClass('show');
+		// 	} else {
+		// 		$(this).addClass('active');
+		// 		$(this).text('접기');
+		// 		$('.doc-list').addClass('show');
+		// 	}
+		// });
 	</script>
 </html>

@@ -1754,6 +1754,74 @@ select {
 .todolist-wrap .tb-todolist .disabled td {
   opacity: 0.5;
 }
+.todolist-wrap .dp {
+  border: 1px solid #ddd;
+}
+.todolist-wrap .dp .dp-heading {
+  display: flex;
+  align-items: center;
+  padding: 20px 20px 0;
+}
+.todolist-wrap .dp .dp-heading button {
+  width: 20px;
+  height: 20px;
+  font-size: 0;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.todolist-wrap .dp .dp-heading button.button-left {
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.2 11.814L1 6.657L5.2 1.5' stroke='%23007DFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.todolist-wrap .dp .dp-heading button.button-right {
+  background-image: url("data:image/svg+xml,%3Csvg width='7' height='13' viewBox='0 0 7 13' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 11.814L5.2 6.657L1 1.5' stroke='%23007DFA' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
+}
+.todolist-wrap .dp .dp-heading .heading-center {
+  font-size: 18px;
+  color: #1a1a1a;
+  font-weight: 700;
+  text-align: center;
+  flex: 1;
+}
+.todolist-wrap .dp .dp-body {
+  padding: 20px 10px 10px;
+}
+.todolist-wrap .dp .dp-body .week {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 10px;
+}
+.todolist-wrap .dp .dp-body .week span {
+  display: block;
+  width: 14.2857142857%;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+.todolist-wrap .dp .dp-body .week span:first-child {
+  color: #FA4545;
+}
+.todolist-wrap .dp .dp-body .week span:last-child {
+  color: #007DFA;
+}
+.todolist-wrap .dp .dp-body .days {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.todolist-wrap .dp .dp-body .days button {
+  display: block;
+  width: 14.2857142857%;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  text-align: center;
+  height: 36px;
+  line-height: 36px;
+}
+.todolist-wrap .dp .dp-body .days button:disabled {
+  color: #BDBDBD;
+}
 
 .orgnzt-wrap .orgnzt-top h2 {
   font-size: 18px;

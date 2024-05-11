@@ -6,10 +6,10 @@
 		<meta name="viewport" content="width=device-width">
 		<title>Tbizone</title>
 		<!--jquery-->
-		<script src="../assets/js/jquery-3.6.4.min.js"></script>
+		<!-- <script src="../assets/js/jquery-3.6.4.min.js"></script>
 		<script src="../assets/js/jquery-ui.min.js"></script>
 		<script src="../assets/js/jquery.ui.touch-punch.min.js"></script>
-		<script src="../assets/js/Tbizone.ui.js"></script>
+		<script src="../assets/js/Tbizone.ui.js"></script> -->
 		<!--css-->
 		<link rel="stylesheet" href="../assets/css/Tbizone.min.css">
 		<!--jsTree-->
@@ -100,11 +100,6 @@
 							</div>
 						</div>
 						<div class="orgnzt">
-							<!--
-							<div class="jstree-wrap">
-								<div id="orgMenu"></div>
-							</div>
-							// jstree 사용할경우-->
 							<div class="org-tree-wrap">
 								<div class="org-tree">
 									<ul>
@@ -164,7 +159,7 @@
 							</div>
 							<div class="orgnzt-info">
 								<ul class="tab-group">
-									<li><button type="button" class="tab-buttons active">기본정보</button></li>
+									<li><button type="button" class="tab-buttons active">기본정보</button></li><!--[P] tab 활성화 active class추가-->
 									<li><button type="button" class="tab-buttons">부서원 정보</button></li>
 								</ul>
 								<table class="tb-org">
@@ -321,55 +316,55 @@
 		</div>
 	</body>
 	<script>
-	$(function () {
-		$('#orgMenu').jstree({
-			'core' : {
-				'check_callback': true,
-				'data' : [
-					{
-						"text" : "(사)전국지역문화재단연합회(1000)",
-						"state" : { "opened" : true },
-						"children" : [
-							{
-								"text" : "전국지역문화재단연합회(1000)",
-								"state" : { "opened" : true },
-								//"state" : { "selected" : true },
-								//"icon" : "jstree-file"
-								"children" : [
-									{
-										"text":"사무처(1000)",
-									},
-									{
-										"text":"운영위원회(2000)",
-									},
-									{
-										"text":"그룹웨어 TF팀(10100)",
-									},
-									{
-										"text":"관리부서(1100)",
-										"state" : { "opened" : true },
-										"children" : [
-											{
-												"text":"관리팀(1100)",
-											},
-										]
-									},
-								]
-							},
-							{ 
-								"text" : "관리팀(1100)", 
-								//"state" : { "disabled" : true } 
-							},
-							{ 
-								"text" : "전국지역문화재단연합회(2000)", 
-								//"state" : { "disabled" : true } 
-							}
-						]
-					}
-				]
-			},
-			"plugins" : ["dnd"],
-		});
-	});	
+	// $(function () {
+	// 	$('#orgMenu').jstree({
+	// 		'core' : {
+	// 			'check_callback': true,
+	// 			'data' : [
+	// 				{
+	// 					"text" : "(사)전국지역문화재단연합회(1000)",
+	// 					"state" : { "opened" : true },
+	// 					"children" : [
+	// 						{
+	// 							"text" : "전국지역문화재단연합회(1000)",
+	// 							"state" : { "opened" : true },
+	// 							//"state" : { "selected" : true },
+	// 							//"icon" : "jstree-file"
+	// 							"children" : [
+	// 								{
+	// 									"text":"사무처(1000)",
+	// 								},
+	// 								{
+	// 									"text":"운영위원회(2000)",
+	// 								},
+	// 								{
+	// 									"text":"그룹웨어 TF팀(10100)",
+	// 								},
+	// 								{
+	// 									"text":"관리부서(1100)",
+	// 									"state" : { "opened" : true },
+	// 									"children" : [
+	// 										{
+	// 											"text":"관리팀(1100)",
+	// 										},
+	// 									]
+	// 								},
+	// 							]
+	// 						},
+	// 						{ 
+	// 							"text" : "관리팀(1100)", 
+	// 							//"state" : { "disabled" : true } 
+	// 						},
+	// 						{ 
+	// 							"text" : "전국지역문화재단연합회(2000)", 
+	// 							//"state" : { "disabled" : true } 
+	// 						}
+	// 					]
+	// 				}
+	// 			]
+	// 		},
+	// 		"plugins" : ["dnd"],
+	// 	});
+	// });	
 	</script>
 </html>
