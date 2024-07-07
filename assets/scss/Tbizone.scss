@@ -2,25 +2,10 @@
 
 //font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
-
 @import '@abstracts/variables';
-// @import '@abstracts/mixins';
-
 @import '@base/reset';
 @import '@base/typography';
-
-@import 'https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css';//jquery-ui
-
-@import '@layout/layout';
-@import '@layout/sidebar';
-
 @import '@components/buttons';
 @import '@components/forms';
-@import '@components/icons';
-@import '@components/modal';
-
-@import '@pages/docs';
-@import '@pages/todolist';
-@import '@pages/orgnzt';
-@import '@pages/login';
-@import '@pages/modal_conts';
+@import '@layout/layout';
+@import '@pages/page';
