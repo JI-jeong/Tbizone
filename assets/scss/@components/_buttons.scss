@@ -26,7 +26,7 @@
 		height:70px;
 		padding:0 18px;
 		@include font(20px, 24px, 600 );
-		@include  btn-color($white, $primary, $primary);
+		@include  btn-color($primary, $primary, $white);
 		&::after{
 			@include icon(10px, 18px);
 			background-image: url("data:image/svg+xml,%3Csvg width='10' height='18' viewBox='0 0 10 18' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.5625 15.875L8.4375 9L1.5625 2.125' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
@@ -70,6 +70,31 @@
 		&::before {
 			@include icon(20px, 21px);
 			background-image: url("data:image/svg+xml,%3Csvg width='20' height='21' viewBox='0 0 20 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M17.0751 3.268C15.1795 1.37869 12.6725 0.337013 10.0024 0.337013C8.10677 0.337013 6.28253 0.868064 4.71308 1.84846L2.86845 0L2.02258 6.14793L8.15773 5.30029L6.23158 3.37013C7.373 2.74717 8.6571 2.42037 9.99216 2.42037C12.1119 2.42037 14.0992 3.24758 15.5872 4.74882C17.0853 6.25006 17.9108 8.2415 17.9108 10.3555C17.9108 12.4695 17.0853 14.4711 15.5872 15.9622C14.0891 17.4634 12.1018 18.2906 9.99216 18.2906C7.88257 18.2906 5.88507 17.4634 4.39715 15.9622C3.61242 15.1758 3.01113 14.2567 2.61367 13.2252C2.2264 12.2346 2.05315 11.1827 2.08373 10.1104C2.10411 9.53849 1.6455 9.04829 1.07479 9.03808C0.504077 9.01765 0.014895 9.47721 0.00470367 10.0491C-0.0360615 11.3972 0.188147 12.7248 0.677328 13.9809C1.1767 15.2881 1.94105 16.4524 2.9296 17.443C4.81499 19.3323 7.33224 20.374 10.0024 20.374C12.6725 20.374 15.1897 19.3323 17.0751 17.443C18.9605 15.5537 20 13.0312 20 10.3555C20 7.67981 18.9605 5.15732 17.0751 3.268Z' fill='white'/%3E%3C/svg%3E%0A");
+		}
+	}
+	&[data-intent=icon]{
+		font-size:0;
+		border:none;
+		padding:0;
+		height:unset;
+		width:unset;
+	}
+
+	&[data-intent=dropdown]{
+		width:100%;
+		justify-content: space-between;
+		padding:0 12px;
+		border-color:#E4E4E7;
+		background-color: $white;
+		border-radius: 4px;
+		position: relative;
+		z-index: 2;
+		@include font(16px, 22px, 400);
+		color:$base-color;
+		&::after {
+			margin-left:10px;
+			@include icon(28px, 28px);
+			background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2033_335)'%3E%3Cpath d='M9.41421 10.5C8.52331 10.5 8.07714 11.5771 8.70711 12.2071L13.2929 16.7929C13.6834 17.1834 14.3166 17.1834 14.7071 16.7929L19.2929 12.2071C19.9229 11.5771 19.4767 10.5 18.5858 10.5L9.41421 10.5Z' fill='%23333333'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2033_335'%3E%3Crect width='28' height='28' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 		}
 	}
 

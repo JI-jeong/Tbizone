@@ -1,7 +1,8 @@
 @charset "utf-8";
 
 //login
-.login {
+
+.login-container {
 	width:100%;
 	height:100%;
 	display: flex;
@@ -59,32 +60,54 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		padding:60px 0;
+		overflow-y: auto;
+		&.align-top {
+			align-items: flex-start;
+		}
+
 		.login-center {
-			width:445px;
-			h1 {
-				font-size:32px;
-				font-weight:700;
-				color:#2F3367;
-				margin-bottom:16px;
+			width:446px;
+			&.terms {
+				width:866px;
 			}
-			.sub-tit {
-				font-size:16px;
-				font-weight:500;
-				color:#2F3367;
-				margin-bottom:50px;
+			.login-title {
+				display: flex;
+				align-items: center;
+				margin-bottom:30px;
+				h1 {
+					@include font(32px, 38px, 700);
+					color:$title;
+				}
+				.sub-tit {
+					display: inline-flex;
+					align-items: flex-end;
+					height: 38px;
+					@include font(18px, 22px, 500);
+					color:#666;
+					&::before {
+						content:'';
+						display: inline-block;
+						width:1px; 
+						height:30px;
+						background-color: #E4E4E7;
+						margin:0 15px 4px;
+					}
+				}
 			}
 			.login-link {
 				border-top: 1px solid #ECECF0;
 				padding:30px 10px 0;
 				margin-top: 100px;
-				text-align: right;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
 				.link-items {
-					color:#007DFA;
-					font-size:16px;
-					font-weight: 700;
+					@include font(16px, 18px, 700);
+					color:$primary;
 				}
 			}
-			.form-items {
+			.login-items {
 				position: relative;
 				[type=text],
 				[type=password] {
@@ -121,7 +144,7 @@
 				&.inp-pw [type=password]:valid{
 					background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M25.265 12.4395H12.8058C12.7238 12.0242 12.595 11.6214 12.4214 11.2352C12.1514 10.6364 11.7787 10.0936 11.315 9.62222C10.284 8.57639 8.91354 8 7.4559 8C5.99827 8 4.62843 8.57639 3.59814 9.62222C2.56784 10.668 2 12.0592 2 13.5381C2 15.0171 2.56784 16.4082 3.59814 17.454C4.62843 18.4999 5.99892 19.0763 7.45656 19.0763C8.9142 19.0763 10.284 18.4999 11.315 17.454C11.7794 16.9826 12.1514 16.4399 12.4214 15.8411C12.5957 15.4548 12.7238 15.0521 12.8058 14.6368H18.8035V15.6172C18.8035 16.0292 19.1326 16.3633 19.5385 16.3633H20.2332C20.6391 16.3633 20.9682 16.0292 20.9682 15.6172V14.6368H22.4785V16.7984C22.4785 17.2104 22.8076 17.5445 23.2135 17.5445H23.9082C24.3141 17.5445 24.6432 17.2104 24.6432 16.7984V14.6368H25.2643C25.6702 14.6368 25.9993 14.3027 25.9993 13.8907V13.1856C25.9993 12.7736 25.6709 12.4395 25.265 12.4395ZM7.4559 16.879C5.64117 16.879 4.16467 15.3802 4.16467 13.5381C4.16467 11.696 5.64117 10.1973 7.4559 10.1973C9.27064 10.1973 10.7471 11.696 10.7471 13.5381C10.7471 15.3802 9.27064 16.879 7.4559 16.879Z' fill='%232F3367'/%3E%3C/svg%3E%0A");
 				}
-				& + .form-items {
+				& + .login-items {
 					margin-top:20px;
 				}
 				label {
@@ -162,6 +185,108 @@
 						background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.5625 23.875L20.4375 17L13.5625 10.125' stroke='white' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 					}
 				}
+			}
+			.form-items {
+				position: relative;
+				margin-top:30px;
+				.msg-invalid {
+					position: absolute;
+					top:calc(50% + 20px);
+					right:-20px;
+					@include font(16px, 18px, 400);
+					color:#FA4545;
+					transform: translate(100%, -50%);
+				}
+				label {
+					display: block;
+					@include font(18px, 20px, 600);
+					color:$title;
+					margin-bottom: 12px;
+				}
+				[type=text],
+				[type=password]{
+					border:3px solid transparent;
+					border-radius: 10px;
+					width:100%;
+					height:64px;
+					background-color: #F5F5F7;
+					padding-left:16px;
+					padding-right:50px;
+					&::placeholder {
+						@include font(16px, 18px, 400);
+						color:#8B8FA8;
+					}
+					&:focus,
+					&:not(:placeholder-shown) {
+						border-color: #80BEFC;
+						background-color: $white;
+						color:$base-color;
+					}
+				}
+				.form-input {
+					position: relative;
+					[data-intent=icon] {
+						position:  absolute;
+						top:calc(50% - 12px);
+						right:18px;					
+					}
+					.icon {
+						@include icon(24px, 24px);
+						&.show {
+							background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.3891 10.3429C20.0971 8.72103 17.1582 6 12.0001 6C6.84197 6 3.90305 8.72103 2.61103 10.3429C1.79641 11.3584 1.79641 12.6416 2.61103 13.6571C3.90305 15.279 6.84197 18 12.0001 18C17.1582 18 20.0971 15.279 21.3891 13.6571C22.2037 12.6416 22.2037 11.3584 21.3891 10.3429Z' fill='%238B8FA8'/%3E%3Cpath d='M14.5 12C14.5 13.3807 13.3807 14.5 12 14.5C10.6193 14.5 9.5 13.3807 9.5 12C9.5 10.6193 10.6193 9.5 12 9.5C13.3807 9.5 14.5 10.6193 14.5 12Z' fill='%238B8FA8' stroke='white'/%3E%3C/svg%3E%0A");
+						}
+						&.del {
+							background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M16 8L8 16M16 16L8 8' stroke='%238B8FA8' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+						}
+					}
+				}
+				.form-button {
+					margin-top:10px;
+					text-align: right;
+					[data-color=green]{
+						height:32px;
+						border-radius: 16px;
+					}
+				}
+			}
+			.terms-title {
+				display: flex;
+				align-items: flex-end;
+				justify-content: space-between;
+				margin-bottom: 20px;
+				h3 {
+					@include font (26px, 30px, 600);
+					color:$title;
+					height: unset;
+				}
+			}
+			.terms-conts {
+				border:1px solid #E4E4E7;
+				padding:26px;
+				border-radius: 4px;
+				height:300px;
+				overflow-y: auto;
+				@include font (16px,24px,400);
+				color:$base-color;
+				margin-bottom: 30px;
+				h3 {
+					@include font (18px,28px,600);
+					margin-bottom:40px;
+				}
+				h4 {
+					@include font (16px,24px,600);
+				}
+				ul {
+					margin-bottom:30px;
+				}
+			}
+			.terms-conts + .form-checkbox {
+				text-align: center;
+			}
+		}
+		.dropdown {
+			.buttons {
+				height:64px;
 			}
 		}
 	}

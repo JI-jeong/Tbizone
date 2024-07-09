@@ -2,17 +2,15 @@
 //checkbox 
 [type=checkbox]{
 	width:20px;
-	cursor: pointer;
 	height: 20px;
 	border:1px solid #ddd;
 	background-repeat: no-repeat;
 	background-position: center;
-	background-color: #fff;
+	background-color: $white;
+	cursor: pointer;
+	vertical-align: top;
 	&:checked{
-		border-color:#3981F7;
-		background-color: #3981F7;
-		background-image: url("data:image/svg+xml,%3Csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.5 6L5 8.5L10 3.5' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
-	
+		background-image: url("data:image/svg+xml,%3Csvg width='12' height='10' viewBox='0 0 12 10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2.91689 8.76673C3.07668 8.94866 3.24068 9.12798 3.41275 9.29683C3.54445 9.42646 3.68351 9.55272 3.83171 9.66069C4.02521 9.8019 4.25031 9.92517 4.49122 9.91658C4.7251 9.90799 4.93967 9.77724 5.12228 9.63192C5.4243 9.39209 5.7077 9.06484 5.95949 8.76748L11.1794 2.59872C11.4326 2.29949 11.5934 1.91695 11.5471 1.50902C11.5105 1.18812 11.3465 0.890757 11.0902 0.713685C10.8918 0.576585 10.6596 0.527647 10.4265 0.570981C10.1143 0.629258 9.84562 0.840699 9.63702 1.08576C7.93943 3.07764 6.245 5.07213 4.55022 7.06699L4.43819 7.19886L2.31673 4.70976C2.02104 4.36272 1.62491 4.18901 1.19577 4.35226C1.03002 4.41539 0.880064 4.52335 0.758557 4.65821C0.623002 4.80913 0.520458 4.99667 0.47305 5.19951C0.391928 5.54581 0.483585 5.87455 0.705529 6.1383L2.91689 8.76673Z' fill='black'/%3E%3C/svg%3E%0A");
 	}
 	&:disabled {
 		background-color:#fafafa ;
@@ -22,11 +20,10 @@
 		}		
 	}
 	& + label {
-		font-size:16px;
-		color:#333;
-		font-weight:600;
+		@include font(16px, 20px, 400);
+		color:$base-color;
 		cursor: pointer;
-		line-height: 1;
+		margin-left:10px;
 	}
 }
 
@@ -56,7 +53,7 @@
 }
 [type=radio] + label {
 	font-size:15px;
-	color:#333;
+	color:$base-color;
 	cursor: pointer;
 }
 
@@ -291,5 +288,43 @@ select {
 	}
 	.right {
 		margin-left:auto;
+	}
+}
+
+
+.dropdown {
+	.drop-list {
+		display:none;
+		padding-top:4px;
+		margin-top:-4px;
+		border-radius: 0 0 4px 4px;
+		border:1px solid #E4E4E7;
+		.buttons {
+			@include font(16px, 18px, 400);
+			color:$base-color;
+			width:100%;
+			justify-content: space-between;
+			text-align: center;
+			padding:0 12px;
+		}
+		li {
+			border-bottom:1px solid #E4E4E7;
+			&:last-child{
+				border-bottom:none;
+			}
+		}
+	}
+	[data-intent=dropdown].active+ .drop-list {
+		display:block;
+	}
+}
+
+.list-group {
+	li {
+		padding-left: 20px;
+		.num {
+			float: left;
+			margin-left:-20px;
+		}
 	}
 }
