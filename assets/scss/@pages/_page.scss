@@ -74,3 +74,66 @@
 		}
 	}
 }
+
+//마이페이지
+.mypage-info {
+	display: flex;
+	align-items: stretch;
+
+	.profile {
+		width:210px;
+		border-right: 1px solid #ddd;
+		.photo {
+			width:120px;
+			height:160px;
+			margin:0 auto;
+			background-color: #EAEFF8;
+			background-image: url("data:image/svg+xml,%3Csvg width='72' height='72' viewBox='0 0 72 72' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2078_457)'%3E%3Cpath d='M36.0025 0C16.1496 0 0 16.1496 0 36.0025C0 55.8555 16.1496 72.0051 36.0025 72.0051C55.8555 72.0051 72.0051 55.8555 72.0051 36.0025C72.0051 16.1496 55.8504 0 36.0025 0ZM36.0025 67.1028C18.8522 67.1028 4.8972 53.1478 4.8972 35.9975C4.8972 18.8471 18.8522 4.8972 36.0025 4.8972C53.1529 4.8972 67.1079 18.8522 67.1079 36.0025C67.1079 53.1529 53.1529 67.1079 36.0025 67.1079V67.1028Z' fill='white'/%3E%3Cpath d='M47.7274 46.1267C47.0213 45.8676 46.2186 46.1318 45.8325 46.7821C44.7251 48.621 41.8802 52.0247 36.0026 52.0247C30.1249 52.0247 27.2801 48.621 26.1726 46.7821C25.7815 46.1369 24.9839 45.8676 24.2778 46.1267C22.4032 46.8176 21.7326 49.1189 22.9366 50.714C25.0296 53.4776 29.0327 56.9219 36.0026 56.9219C42.9725 56.9219 46.9756 53.4776 49.0686 50.714C50.2725 49.1189 49.602 46.8176 47.7274 46.1267Z' fill='white'/%3E%3Cpath d='M48.9871 36.0021C51.5543 36.0021 53.6354 33.4456 53.6354 30.292C53.6354 27.1385 51.5543 24.582 48.9871 24.582C46.42 24.582 44.3389 27.1385 44.3389 30.292C44.3389 33.4456 46.42 36.0021 48.9871 36.0021Z' fill='white'/%3E%3Cpath d='M23.0128 36.0021C25.5799 36.0021 27.6611 33.4456 27.6611 30.292C27.6611 27.1385 25.5799 24.582 23.0128 24.582C20.4456 24.582 18.3645 27.1385 18.3645 30.292C18.3645 33.4456 20.4456 36.0021 23.0128 36.0021Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2078_457'%3E%3Crect width='72' height='72' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+			background-repeat: no-repeat;
+			background-position: center;
+			.user-img {
+				position: relative;
+				&::before{
+					content: '';
+					display: block;
+					padding-top:calc(160 / 120 * 100%);
+				}
+				& > img {
+					position: absolute;
+					top:0;
+					left:0;
+					width:100%;
+					height:100%;
+					object-fit: cover;
+				}
+			}
+		}
+		.tx-msg {
+			@include font(15px, 18px, 400);
+			color:$base-color;
+			text-align: center;
+			margin-top:20px;
+		}
+	}
+	.information {
+		flex:1;
+		padding-left:40px;
+		.table[data-intent=info] {
+			border-top: 2px solid #666;
+			border-bottom:1px solid #666;
+			th {
+				border-top: none;
+				
+			}
+			tr:last-child {
+				th, td {
+					border-bottom:none;
+				}
+			}
+			tr:hover td {
+				background-color: unset;
+			}
+		}
+	}
+
+}

@@ -98,7 +98,11 @@
 		}
 	}
 
-
+	&[data-intent=modal]{
+		width:120px;
+		height:54px;
+		@include  btn-color($primary, $primary, $white) ;
+	}
 	&[data-color=blue]{
 		@include  btn-color($primary, $primary, $white) ;
 	}
