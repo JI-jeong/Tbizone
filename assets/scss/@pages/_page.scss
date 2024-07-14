@@ -74,12 +74,10 @@
 		}
 	}
 }
-
 //마이페이지
 .mypage-info {
 	display: flex;
 	align-items: stretch;
-
 	.profile {
 		width:210px;
 		border-right: 1px solid #ddd;
@@ -118,32 +116,6 @@
 	.information {
 		flex:1;
 		padding-left:40px;
-		.table[data-intent=info] {
-			border-top: 2px solid #666;
-			border-bottom:1px solid #666;
-			th {
-				border-top: none;
-				text-align: right;
-				padding:0 20px;
-				height:50px;
-				
-			}
-			tr:last-child {
-				th, td {
-					border-bottom:none;
-									}
-			}
-			td {
-				padding:0 9px;
-				height:50px;
-				@include font(15px,20px,400);
-				color:#666;
-				text-align: left;
-			}
-			tr:hover td {
-				background-color: unset;
-			}
-		}
 		.form-inp {
 			width:180px;
 			&.w240 {
@@ -187,6 +159,32 @@
 	}
 }
 
+.table[data-intent=info] {
+	border-top: 2px solid #666;
+	border-bottom:1px solid #666;
+	th {
+		border-top: none;
+		text-align: right;
+		padding:0 20px;
+		height:50px;
+		
+	}
+	tr:last-child {
+		th, td {
+			border-bottom:none;
+		}
+	}
+	td {
+		padding:0 9px;
+		height:50px;
+		@include font(15px,20px,400);
+		color:#666;
+		text-align: left;
+	}
+	tr:hover td {
+		background-color: unset;
+	}
+}
 
 .button-group[data-intent=tab-top]{
 	margin-bottom:16px;
@@ -199,7 +197,6 @@
 		}
 	}
 }
-
 .file-search {
 	background-color: #F4F4F4;
 	padding:16px 30px;
@@ -280,7 +277,6 @@
 		}
 	}
 }
-
 .file-list {
 	background-color: #ddd;
 	border-radius: 4px;
@@ -316,4 +312,144 @@
 }
 .editor {
 	border:1px solid #ddd;
+}
+
+//modal(결제)
+.modal-payment {
+	.payment-grid {
+		display: flex;
+		align-items: stretch;
+		justify-content: space-between;
+		margin-bottom: 40px;
+		.left {
+			width:460px;
+		}
+		.right {
+			width:360px;
+		}
+	}
+	.pay-search {
+		background-color: #EAEFF8;
+		padding:20px;
+		border-radius: 4px;
+		margin-bottom: 30px;
+		.form-inp{
+			gap:10px;
+			.buttons {
+				padding:0 10px;
+				min-width: 58px;
+				height: 40px;
+				@include font(16px, 20px, 500);
+				border-radius: 4px;
+			}
+			label {
+				@include font(16px, 20px, 600);
+				color:$title;
+			}
+		}
+	}
+	.table {
+		td {
+			padding:15px 0;
+		}
+		.nodata {
+			padding:25px 0;
+		}
+		&[data-intent=info] {
+			margin-bottom:40px;
+			td {
+				padding:12px;
+				line-height: unset;
+			}
+			.form-inp{
+				width:100%;
+				[type=password] {
+					width:100%;
+					border-radius: 0
+				}
+			}
+			.form-radio{
+				height:26px;
+			}
+			.table-inner table {
+				width:100%;
+				td {
+					border:1px solid #ddd;
+					text-align: center;
+					.sign {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						padding: 10px;;
+						min-height: 140px;
+					}
+				}
+			}
+		}
+	}
+	.payment-title {
+		@include font(20px, 24px, 500);
+		color:$title;
+		margin-bottom:20px;
+	}
+	.payment-sub-title {
+		@include font(18px, 22px, 500);
+		color:$base-color;
+		margin-bottom:20px;
+	}
+	.payment-list {
+		border-top:2px solid #666;
+		li {
+			display: flex;
+			align-items: center;
+			padding:8px 20px;
+			min-height: 50px;
+			border-bottom: 1px solid #ddd;
+			&:last-child {
+				border-bottom-color:#666;
+			}
+		}
+		.date {
+			@include font(16px, 20px, 400);
+			color:$base-color;
+			margin-left:auto;
+		}
+		.buttons:not([data-intent=icon]) {
+			height:32px;
+			border-radius: 3px;
+			padding:7px 10px;
+			@include font(15px, 18px, 500);
+			min-width: 76px;
+			&[data-color=gray-line]{
+				background-color: #F4F4F4;
+			}
+		
+		}
+		.buttons[data-intent=icon] {
+			&::before {
+				@include icon(24px, 24px);
+				background-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg opacity='0.9'%3E%3Cpath d='M14.3865 14.3859L12 11.9995M12 11.9995L9.61351 9.61297M12 11.9995L9.61352 14.3859M12 11.9995L14.3865 9.61297M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02945 7.02944 3.00002 12 3.00002C16.9706 3.00002 21 7.02945 21 12Z' stroke='%239096A2' stroke-width='2' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E%0A");
+			}
+		}
+		.form-inp {
+			gap:10px;
+			[type=text] {
+				height:36px;
+			}
+		}
+	}
+	[data-intent=pay-add] {
+		margin-top:30px;
+		gap:10px;
+		.buttons {
+			color:$white;
+			border-radius: 4px;
+			border-color: #0AAF60;
+			@include font(16px, 20px, 500)
+		}
+	}
+	.pay-choice {
+		margin-bottom:40px;
+	}
+
 }

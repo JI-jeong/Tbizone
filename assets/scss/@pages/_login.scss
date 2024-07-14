@@ -10,7 +10,7 @@
 	.login-bg {
 		position: relative;
 		width:640px;
-		background: url('../img/bg_login.png') center center no-repeat;
+		background: url('../images/bg_login.png') center center no-repeat;
 		background-size: 640px auto;
 		&::after {
 			content: '';
@@ -18,7 +18,7 @@
 			position: absolute;
 			top:50%;
 			left:50%;
-			background: url('../img/logo.svg') no-repeat;
+			background: url('../images/logo.svg') no-repeat;
 			background-size: contain;
 			transform: translate(-50%,-50%);
 			width:244px;

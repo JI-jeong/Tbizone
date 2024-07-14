@@ -134,6 +134,18 @@
 	&[data-color=light-gray]{
 		@include  btn-color(#F1F1F1, #F1F1F1, $base-color);
 	}
+	&[data-color=green-line]{
+		@include  btn-color(#CEEFDF, #B1DFC9, #0AAF60, );
+	}
+	&[data-color=blue-line]{
+		@include  btn-color(#D7EBFF, #ABD5FF, #0381F3, );
+	}
+	&[data-color=purple-line]{
+		@include  btn-color(#E1DAFE, #D1C9F3, #6945FA, );
+	}
+	&[data-color=navy]{
+		@include  btn-color(#2D448B, #2D448B, $white, );
+	}
 }
 
 .button-group {
