@@ -103,6 +103,22 @@
 		height:54px;
 		@include  btn-color($primary, $primary, $white) ;
 	}
+	&[data-intent=tab-add]{
+		width:24px;
+		height:24px;
+		padding:0;
+		border-radius: 0;
+		border: none;
+		margin-bottom:15px;
+		margin-left:10px;
+		&::after {
+			@include icon(18px, 18px);
+			background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 5.49997L10 9.99995M10 9.99995V14.4999M10 9.99995H14.5M10 9.99995H5.5M19 4.37498L19 15.625C19 17.489 17.489 19 15.625 19H4.375C2.51104 19 1 17.489 1 15.625V4.37498C1 2.51103 2.51104 1 4.375 1H15.625C17.489 1 19 2.51103 19 4.37498Z' stroke='%23007DFA' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E%0A");
+			background-size: contain;
+		}
+	}
+	
+
 	&[data-color=blue]{
 		@include  btn-color($primary, $primary, $white) ;
 	}
@@ -111,5 +127,23 @@
 	}
 	&[data-color=gray]{
 		@include  btn-color($btn-gray, $btn-gray, $white);
+	}
+	&[data-color=gray-line]{
+		@include  btn-color($white, #ddd, $base-color);
+	}
+	&[data-color=light-gray]{
+		@include  btn-color(#F1F1F1, #F1F1F1, $base-color);
+	}
+}
+
+.button-group {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	&[data-align=right] {
+		justify-content: flex-end;
+	}
+	&[data-align=center] {
+		justify-content: center;
 	}
 }
