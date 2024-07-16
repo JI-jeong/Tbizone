@@ -11,7 +11,8 @@
 		position: relative;
 		width:640px;
 		background: url('../images/bg_login.png') center center no-repeat;
-		background-size: 640px auto;
+		//background-size: 640px auto;
+		background-size: cover;
 		&::after {
 			content: '';
 			pointer-events: none;
@@ -172,7 +173,8 @@
 	}
 	.button-group {
 		margin-top:60px;
-		text-align: center;
+		justify-content: center;
+		//text-align: center;
 		.buttons{
 			width:170px;
 			height:70px;

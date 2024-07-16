@@ -123,7 +123,7 @@
 		@include  btn-color($primary, $primary, $white) ;
 	}
 	&[data-color=green]{
-		@include  btn-color(#0AAF60, #B1DFC9, #CEEFDF);
+		@include  btn-color(#0AAF60, #B1DFC9, #CEEFDF);  
 	}
 	&[data-color=gray]{
 		@include  btn-color($btn-gray, $btn-gray, $white);

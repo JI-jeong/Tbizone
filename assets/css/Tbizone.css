@@ -1506,7 +1506,7 @@ header .logo {
   position: relative;
   width: 640px;
   background: url("../images/bg_login.png") center center no-repeat;
-  background-size: 640px auto;
+  background-size: cover;
 }
 .login-container .login-bg::after {
   content: "";
@@ -1669,7 +1669,7 @@ header .logo {
 }
 .login-container .button-group {
   margin-top: 60px;
-  text-align: center;
+  justify-content: center;
 }
 .login-container .button-group .buttons {
   width: 170px;
