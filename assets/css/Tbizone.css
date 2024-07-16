@@ -2237,8 +2237,6 @@ header .logo {
 .modal-payment .pay-search {
   background-color: #EAEFF8;
   padding: 20px;
-  border-radius: 4px;
-  margin-bottom: 30px;
 }
 .modal-payment .pay-search .form-inp {
   gap: 10px;
