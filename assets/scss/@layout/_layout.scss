@@ -283,6 +283,7 @@ header {
 		.page-path {
 			display: flex;
 			align-items: center;
+			margin-left:auto;
 			li {
 				display: inline-flex;
 				align-items: center;
@@ -310,6 +311,11 @@ header {
 				}
 			}
 			
+		}
+		.page-box {
+			border:1px solid #ddd;
+			margin-top:-31px;
+			height: calc(100% - 40px);
 		}
 	}
 }

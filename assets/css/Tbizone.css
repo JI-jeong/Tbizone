@@ -941,12 +941,24 @@ select {
   margin-left: auto;
 }
 
+.dropdown {
+  position: relative;
+  z-index: 0;
+}
 .dropdown .drop-list {
   display: none;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
   padding-top: 4px;
   margin-top: -4px;
   border-radius: 0 0 4px 4px;
   border: 1px solid #E4E4E7;
+  background-color: #fff;
+  z-index: 1;
+  max-height: 330px;
+  overflow-y: auto;
 }
 .dropdown .drop-list .buttons {
   font-size: 16px;
@@ -1461,6 +1473,7 @@ header .logo {
 .container .contents .page-path {
   display: flex;
   align-items: center;
+  margin-left: auto;
 }
 .container .contents .page-path li {
   display: inline-flex;
@@ -1494,6 +1507,11 @@ header .logo {
   font-size: 0;
   pointer-events: none;
   background-image: url("data:image/svg+xml,%3Csvg width='20' height='19' viewBox='0 0 20 19' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.8493 9.91277L10.3215 0.625925C10.1405 0.458452 9.86011 0.458452 9.67915 0.625925L0.150772 9.91277C-0.161936 10.2024 0.0441437 10.7226 0.472195 10.7226H2.57349V18.0319C2.57349 18.2905 2.78419 18.4997 3.04461 18.4997H7.40868C7.6691 18.4997 7.87979 18.2905 7.87979 18.0319V13.2612C7.87979 13.0026 8.09049 12.7934 8.35091 12.7934H11.6487C11.9091 12.7934 12.1198 13.0026 12.1198 13.2612V18.0319C12.1198 18.2905 12.3305 18.4997 12.5909 18.4997H16.955C17.2154 18.4997 17.4261 18.2905 17.4261 18.0319V10.7226H19.5274C19.9549 10.7226 20.1615 10.2024 19.8488 9.91277H19.8493Z' fill='%239096A2'/%3E%3C/svg%3E%0A");
+}
+.container .contents .page-box {
+  border: 1px solid #ddd;
+  margin-top: -31px;
+  height: calc(100% - 40px);
 }
 
 .login-container {
@@ -2373,4 +2391,119 @@ header .logo {
 }
 .modal-payment .pay-choice {
   margin-bottom: 40px;
+}
+
+.approval-tabbox {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 0;
+  height: 100%;
+}
+.approval-tabbox .inner-conts {
+  max-width: 960px;
+  width: 100%;
+  height: 100%;
+}
+.approval-tabbox .inner-conts .tab {
+  justify-content: center;
+}
+.approval-tabbox .inner-conts .tab li {
+  position: relative;
+}
+.approval-tabbox .inner-conts .sub-tab-conts {
+  padding: 60px 20px 20px;
+  min-height: 100%;
+  border: 2px solid #ddd;
+}
+.approval-tabbox .inner-conts .sub-tab {
+  position: absolute;
+  top: 60px;
+  left: 16px;
+  display: flex;
+  align-items: stretch;
+}
+.approval-tabbox .inner-conts .sub-tab li {
+  display: flex;
+  align-items: center;
+}
+.approval-tabbox .inner-conts .sub-tab li + li::before {
+  content: "";
+  display: inline-block;
+  width: 1px;
+  height: 20px;
+  background-color: #ddd;
+  margin: 0 16px;
+}
+.approval-tabbox .inner-conts .sub-tab .buttons {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 22px;
+  color: #666;
+  border: none;
+  padding: 0;
+  white-space: nowrap;
+  height: unset;
+}
+.approval-tabbox .inner-conts .sub-tab .buttons.active {
+  color: #1A1A1A;
+}
+
+.modal-approval {
+  background-color: #d9d9d9;
+  margin-top: -10px;
+  height: calc(100vh - 240px);
+  overflow-y: auto;
+  margin-bottom: 40px;
+}
+
+.modal-temporary {
+  min-height: calc(100vh - 320px);
+}
+.modal-temporary .temp-list {
+  border-top: 2px solid #666;
+  border-bottom: 1px solid #666;
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+.modal-temporary .temp-list .temp-items {
+  width: 14.2857142857%;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+.modal-temporary .temp-list .temp-items:nth-child(7n) {
+  border-right: none;
+}
+.modal-temporary .temp-list .temp-items dt {
+  background-color: #F4F4F4;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  color: #1A1A1A;
+  text-align: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #ddd;
+}
+.modal-temporary .temp-list .temp-items dd {
+  padding: 10px;
+}
+.modal-temporary .temp-list .temp-items dd .name {
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  color: #333;
+}
+.modal-temporary .temp-list .temp-items dd .sign {
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  margin-top: -1px;
 }/*# sourceMappingURL=Tbizone.css.map */
