@@ -52,12 +52,28 @@
 		@include font(15px, 18px, 500 );
 		@include  btn-color( #CEEFDF, #B1DFC9, #0AAF60);
 	}
+	&[data-intent=tb-top]{
+		height:32px;
+		padding:0 12px;
+		
+		border-radius: 3px;
+		@include font(16px, 20px, 500 );
+		@include  btn-color( $white,$primary,$primary);
+	}
 	&[data-intent=tb-write]{
 		@include  btn-color($primary, $primary,$white);
 		&::before{
 			margin-right:10px;
 			@include icon(18px, 20px);
 			background-image: url("data:image/svg+xml,%3Csvg width='19' height='21' viewBox='0 0 19 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_2032_3483)'%3E%3Cpath d='M17.4041 20.5H0.87562C0.668015 20.5 0.5 20.3277 0.5 20.1148C0.5 19.9019 0.668015 19.7296 0.87562 19.7296H17.4041C17.6117 19.7296 17.7797 19.9019 17.7797 20.1148C17.7797 20.3277 17.6117 20.5 17.4041 20.5Z' fill='white'/%3E%3Cpath d='M18.1704 3.01843L16.0442 0.838025C15.6047 0.387325 14.8911 0.387325 14.4515 0.838025L13.1235 2.19983L13.6551 2.74493L16.3109 5.46853L16.8425 6.01363L18.1704 4.65183C18.6099 4.20113 18.6099 3.46923 18.1704 3.01843Z' fill='white'/%3E%3Cpath d='M15.7813 6.01158L13.1254 3.28808L12.5939 2.74298L2.23545 13.3695C2.23174 13.3695 2.22794 13.3772 2.22423 13.381C2.1979 13.408 2.17918 13.4426 2.16036 13.4812C2.15656 13.4889 2.15285 13.4966 2.14905 13.5043C2.14905 13.5082 2.14525 13.512 2.14154 13.5197L0.548864 18.4198C0.503813 18.5585 0.53765 18.7126 0.639064 18.8166C0.710443 18.8898 0.808151 18.9283 0.905761 18.9283C0.943304 18.9283 0.984649 18.9206 1.02599 18.909L5.80422 17.2756C5.81173 17.2717 5.81554 17.2679 5.81924 17.2679C5.82675 17.264 5.83426 17.2602 5.84177 17.2563C5.87931 17.237 5.91315 17.2178 5.93947 17.1908C5.94328 17.1869 5.95069 17.1831 5.95069 17.1792L16.3128 6.55668L15.7813 6.01158ZM2.59985 17.5569L1.86734 16.8057L2.66372 14.3518L4.99272 16.7402L2.59985 17.5569Z' fill='white'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_2032_3483'%3E%3Crect width='18' height='20' fill='white' transform='translate(0.5 0.5)'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+		}
+	}
+	&[data-intent=tb-booking]{
+		@include  btn-color($primary, $primary,$white);
+		&::before{
+			margin-right:10px;
+			@include icon(24px, 24px);
+			background-image: url("data:image/svg+xml,%3Csvg width='25' height='24' viewBox='0 0 25 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 8.91425H20M7.80952 3V4.54304M18 3V4.54285M18 4.54285H8C6.34315 4.54285 5 5.92436 5 7.62855V17.9143C5 19.6185 6.34315 21 8 21H18C19.6569 21 21 19.6185 21 17.9143L21 7.62855C21 5.92436 19.6569 4.54285 18 4.54285ZM10.5 15.0857L12 16.6285L15.5 13.0286' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A");
 		}
 	}
 	&[data-intent=reset]{
@@ -152,10 +168,22 @@
 	display: flex;
 	align-items: center;
 	gap: 10px;
+	.buttons {
+		min-width:90px;
+	}
 	&[data-align=right] {
 		justify-content: flex-end;
 	}
 	&[data-align=center] {
 		justify-content: center;
+	}
+	&[data-align=both] {
+		justify-content: space-between;
+		.right {
+			margin-left:auto;
+			display: flex;
+			align-items: stretch;
+			gap:10px;
+		}
 	}
 }

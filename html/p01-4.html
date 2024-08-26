@@ -150,7 +150,7 @@
 				</div>
 			</div>
 			<!--modal(p01-6 :결제02-->
-			<div class="modal active" role="dialog">
+			<div class="modal" role="dialog">
 				<div class="modal-popup" data-width="w940">
 					<div class="modal-header">
 						<h1>결재</h1>
@@ -310,10 +310,10 @@
 													<tbody>
 														<tr>
 															<td>
-																<div class="form-radio"><input type="radio" name="ra1" id="ra1-1" checked /><label for="ra1-1">문서 서명</label></div>
+																<div class="form-radio"><input type="radio" name="ra1" id="ra1-1"/><label for="ra1-1">문서 서명</label></div>
 															</td>
 															<td>
-																<div class="form-radio"><input type="radio" name="ra1" id="ra1-2" /><label for="ra1-2">이미지 서명</label></div>
+																<div class="form-radio"><input type="radio" name="ra1" id="ra1-2" checked  /><label for="ra1-2">이미지 서명</label></div>
 															</td>
 														</tr>
 														<tr>
@@ -477,6 +477,171 @@
 					</div>
 					<div class="modal-button-group">
 						<button type="button" class="buttons" data-intent="modal">완료</button>
+					</div>
+					<button type="button" class="modal-button-closed">Closed</button>
+				</div>
+			</div>
+			<!--modal(p01-9 :결제05-->
+			<div class="modal" role="dialog">
+				<div class="modal-popup" data-width="w940">
+					<div class="modal-header">
+						<h1>결재유형 선택</h1>
+					</div>
+					<div class="modal-conts">
+						<div class="modal-payment">
+							<table class="table" data-intent="info">
+								<caption></caption>
+								<colgroup>
+									<col width="180px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">결재 유형</th>
+										<td>
+											<div class="button-list">
+												<button type="button" class="buttons" data-color="gray-line">일반 결재</button>
+												<button type="button" class="buttons" data-color="gray-line">협조</button>
+												<button type="button" class="buttons" data-color="blue-line">기안</button>
+												<button type="button" class="buttons" data-color="gray-line">참조</button>
+												<button type="button" class="buttons" data-color="gray-line">기안 합의</button>
+											</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="modal-button-group">
+						<button type="button" class="buttons" data-color="light-gray">취소</button>
+						<button type="button" class="buttons" data-intent="modal">확인</button>
+					</div>
+					<button type="button" class="modal-button-closed">Closed</button>
+				</div>
+			</div>
+			<!--modal(p01-10 :결제06-->
+			<div class="modal" role="dialog">
+				<div class="modal-popup" data-width="w940">
+					<div class="modal-header">
+						<h1>추가설정</h1>
+					</div>
+					<div class="modal-conts">
+						<div class="modal-payment">
+							<table class="table" data-intent="info">
+								<caption></caption>
+								<colgroup>
+									<col width="180px" />
+									<col />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">공개여부</th>
+										<td>
+											<div class="form-radio">
+												<input type="radio" name="ra101" id="ra101-1"  checked /><label for="ra101-1">공개</label>
+												<input type="radio" name="ra101" id="ra101-2" /><label for="ra101-2">부분공개</label>
+												<input type="radio" name="ra101" id="ra101-3" /><label for="ra101-3">비공개</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">긴급여부</th>
+										<td>
+											<div class="form-radio">
+												<input type="radio" name="ra102" id="ra102-1"  checked /><label for="ra102-1">일반문서</label>
+												<input type="radio" name="ra102" id="ra102-2" /><label for="ra102-2">긴급처리문서</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">보안여부</th>
+										<td>
+											<div class="form-radio">
+												<input type="radio" name="ra103" id="ra103-1"  checked /><label for="ra103-1">일반문서</label>
+												<input type="radio" name="ra103" id="ra103-2" /><label for="ra103-2">보안문서(결재선 소유자 열람)</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">문서구분</th>
+										<td>
+											<div class="form-radio">
+												<input type="radio" name="ra104" id="ra104-1"  checked /><label for="ra104-1">내부문서</label>
+												<input type="radio" name="ra104" id="ra104-2" /><label for="ra104-2">대내문서</label>
+												<input type="radio" name="ra104" id="ra104-3" /><label for="ra104-3">대외문서</label>
+												<input type="radio" name="ra104" id="ra104-4" /><label for="ra104-4">민원문서</label>
+												<input type="radio" name="ra104" id="ra104-5" /><label for="ra104-5">경유문서</label>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">기록물철</th>
+										<td>
+											<button type="button" class="buttons" data-intent="tree-line">경로 선택</button>
+											<span>회계(5년)</span>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="modal-button-group">
+						<button type="button" class="buttons" data-color="light-gray">취소</button>
+						<button type="button" class="buttons" data-intent="modal">확인</button>
+					</div>
+					<button type="button" class="modal-button-closed">Closed</button>
+				</div>
+			</div>
+			<!--modal(p01-11 :결제07-->
+			<div class="modal active" role="dialog">
+				<div class="modal-popup" data-width="w940">
+					<div class="modal-header">
+						<select>
+							<option>2024</option>
+						</select>
+						<h1>기록물철 선택</h1>
+					</div>
+					<div class="modal-conts">
+						<div class="menu-tree">
+							<ul> 
+								<li class="open">
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">기록물철</div>
+									</div>
+									<ul>
+										<li >
+											<div class="node">
+												<i class="ico-ocl"></i><div class="tree-anchor">전국지역문화재단연합회(1000)</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">근태관리 및 출장</div>
+									</div>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">발송문서</div>
+									</div>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">접수문서</div>
+									</div>
+								</li>
+								<li>
+									<div class="node">
+										<i class="ico-ocl"></i><div class="tree-anchor">회계</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-button-group">
+						<button type="button" class="buttons" data-color="light-gray">취소</button>
+						<button type="button" class="buttons" data-intent="modal">확인</button>
 					</div>
 					<button type="button" class="modal-button-closed">Closed</button>
 				</div>

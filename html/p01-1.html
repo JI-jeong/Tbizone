@@ -61,6 +61,7 @@
 								~
 								<div class="datepicker">
 									<i class="ico"></i><input type="text" value="2024-12-12"/>
+									<!--
 									<div class="datepicker-calener">
 										<div class="dp-heading">
 											<button type="button" class="button-left">Prev</button>
@@ -116,6 +117,7 @@
 											</div>
 										</div>
 									</div>
+									-->
 								</div>
 							</div>
 						</div>
@@ -130,6 +132,13 @@
 							<button type="button" class="buttons"  data-intent="search">검색</button>
 							<button type="button" class="buttons"  data-intent="reset">reset</button>
 						</div>
+					</div>
+					<div class="tb-top-btn">
+						<button type="button" class="buttons" data-intent="tb-top">열람지정</button>
+						<button type="button" class="buttons" data-intent="tb-top">재편철</button>
+						<button type="button" class="buttons" data-intent="tb-top">보안설정/해제</button>
+						<button type="button" class="buttons" data-intent="tb-top">삭제/복원</button>
+						<button type="button" class="buttons" data-intent="tb-top">상세정보</button>
 					</div>
 					<table class="table">
 						<caption></caption>
@@ -241,60 +250,74 @@
 			<div class="modal active" role="dialog">
 				<div class="modal-popup" data-width="w940">
 					<div class="modal-header">
-						<h1>결재선 보기</h1>
+						<h1>결재라인 보기</h1>
 					</div>
 					<div class="modal-conts">
 						<div class="modal-temporary">
 							<div class="temp-list">
-								<dl class="temp-items">
-									<dt>결재자 1</dt>
-									<dd>
-										<div class="name"></div>
-										<div class="sign"></div>
-									</dd>
-								</dl>
-								<dl class="temp-items">
-									<dt>결재자 2</dt>
-									<dd>
-										<div class="name"></div>
-										<div class="sign"></div>
-									</dd>
-								</dl>
-								<dl class="temp-items">
-									<dt>결재자 3</dt>
-									<dd>
-										<div class="name"></div>
-										<div class="sign"></div>
-									</dd>
-								</dl>
-								<dl class="temp-items">
-									<dt>결재자 4</dt>
-									<dd>
-										<div class="name"></div>
-										<div class="sign"></div>
-									</dd>
-								</dl>
-								<dl class="temp-items">
-									<dt>결재자 5</dt>
-									<dd>
-										<div class="name"></div>
-										<div class="sign"></div>
-									</dd>
-								</dl>
-								<dl class="temp-items">
-									<dt>결재자 6</dt>
-									<dd>
-										<div class="name"></div>
-										<div class="sign"></div>
-									</dd>
-								</dl>
-								<dl class="temp-items">
-									<dt>결재자 7</dt>
-									<dd>
-										<div class="name"></div>
-										<div class="sign"></div>
-									</dd>
-								</dl>
+								<div class="temp-items">
+									<dl class="blue">
+										<dt>기안</dt>
+										<dd>
+											<div class="name">박현승</div>
+											<div class="sign"><strong>[팀장] 박현승</strong><br />사무처</div>
+										</dd>
+									</dl>
+									<ul>
+										<li>
+											<span class="tag gray">열람</span>
+											<span class="date">2024-12-12 12:12</span>
+										</li>
+										<li>
+											<span class="tag purple">결재</span>
+											<span class="date">2024-12-12 12:12</span>
+										</li>
+									</ul>
+								</div>
+								<div class="temp-items">
+									<dl class="green">
+										<dt>검토</dt>
+										<dd>
+											<div class="name">양효석</div>
+											<div class="sign"><strong>[회장] 이홍길</strong><br />사무처</div>
+										</dd>
+									</dl>
+									<ul>
+										<li>
+											<span class="tag gray">열람</span>
+											<span class="date">2024-12-12 12:12</span>
+										</li>
+										<li>
+											<span class="tag purple">결재</span>
+											<span class="date">2024-12-12 12:12</span>
+										</li>
+									</ul>
+								</div>
+								<div class="temp-items">
+									<dl class="purple">
+										<dt>결재</dt>
+										<dd>
+											<div class="name">이홍길</div>
+											<div class="sign"><strong>[팀장] 박현승</strong><br />사무처</div>
+										</dd>
+									</dl>
+									<ul>
+										<li>
+											<span class="tag gray">열람</span>
+											<span class="date">2024-12-12 12:12</span>
+										</li>
+										<li>
+											<span class="tag purple">결재</span>
+											<span class="date">2024-12-12 12:12</span>
+										</li>
+									</ul>
+								</div>
+								<div class="temp-items">
+									<dl></dl>
+								</div>
+								<div class="temp-items">
+									<dl></dl>
+								</div>
 							</div>
 						</div>
 					</div>

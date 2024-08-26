@@ -275,6 +275,13 @@ select {
 	}
 }
 
+.tb-top-btn {
+	display: flex;
+	align-items: center;
+	margin-bottom:12px;
+	gap:8px;
+}
+
 .paging {
 	display: flex;
 	align-items: center;
@@ -416,6 +423,10 @@ select {
 			h1 {
 				@include font(24px, 28px, 600);
 				color:$title;
+			}
+			select {
+				float:left;
+				margin:-6px 20px -6px 0;
 			}
 			margin-bottom:16px;
 		}
