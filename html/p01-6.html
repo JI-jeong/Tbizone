@@ -167,6 +167,160 @@
 					</div>
 				</div>
 			</div>
+			<!--modal(p01-16 :재가안-->
+			<div class="modal" role="dialog">
+				<div class="modal-popup" data-width="w1040">
+					<div class="modal-header">
+						<h1>재기안</h1>
+					</div>
+					<div class="modal-conts">
+						<h2 class="modal-title">원본 기안 문서 정보</h2>
+						<div class="org-docs-info">
+							<ul>
+								<li>
+									<input type="checkbox" id="chk-m01" checked/><label for="chk-m01">결재선 정보 포함</label>
+								</li>
+								<li>
+									<input type="checkbox" id="chk-m02" checked/><label for="chk-m02">첨부파일 포함</label>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="modal-button-group">
+						<button type="button" class="buttons" data-color="light-gray">취소</button>
+						<button type="button" class="buttons" data-intent="modal">확인</button>
+					</div>
+					<button type="button" class="modal-button-closed">Closed</button>
+				</div>
+			</div>
+			<!--modal(p01-17 :발송상세보기-->
+			<div class="modal active" role="dialog">
+				<div class="modal-popup" data-width="w1040">
+					<div class="modal-header">
+						<h1>발송 상세보기</h1>
+					</div>
+					<div class="modal-conts">
+						<div class="modal-send">
+							<h2 class="modal-title">문서 정보</h2>
+							<table class="table" data-intent="info">
+								<caption></caption>
+								<colgroup>
+									<col width="120px" />
+									<col />
+									<col width="120px" />
+									<col width="180px"  />
+								</colgroup>
+								<tbody>
+									<tr>
+										<th scope="row">문서 제목</th>
+										<td>(사)한국지역문화재단총연합회 창립총회 및 출범식 개회 안내의 건</td>
+										<th scope="row">문서번호</th>
+										<td>사무처-1765</td>
+									</tr>
+									<tr>
+										<th scope="row">기안자(ID)</th>
+										<td>박현승(chiwoo987)</td>
+										<th scope="row" rowspan="3" class="last">관인정보</th>
+										<td rowspan="3" class="center last">
+											<img src="../assets/images/img_stamp.png" alt="직임" />
+										</td>
+									</tr>
+									<tr>
+										<th scope="row">발신인명</th>
+										<td>전국지역문화재단연합회장</td>
+									</tr>
+									<tr>
+										<th scope="row">문서취급</th>
+										<td>전산망</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="table-info">
+								<div class="total">
+									<ul>
+										<li>총 <strong>117</strong>건 ( 발송중&nbsp;:&nbsp;<strong class="gray">0</strong>, 발송실패&nbsp;:&nbsp;<strong class="red">0</strong>건, 도달&nbsp;:&nbsp; <strong class="gray">0</strong>건, 수신&nbsp;:&nbsp;<strong class="green">0</strong>건, 접수&nbsp;:&nbsp; <strong class="blue">0</strong>건, 재전송 요청&nbsp;:&nbsp;<strong>0</strong>건, 반송&nbsp;:&nbsp;<strong>0</strong>건, 기타&nbsp;:&nbsp;<strong>0</strong>건)</li>
+										<li>문서유통 구동 상태&nbsp;&nbsp;:&nbsp;&nbsp;<strong class="blue">정상</strong></li>
+									</ul>
+								</div>
+								<button type="button" class="buttons" data-intent="gray-line">재발송 요청</button>
+							</div>
+							<table class="table">
+								<caption></caption>
+								<colgroup>
+									<col width="45px" />
+									<col />
+									<col width="100px" />
+									<col width="80px" />
+									<col />
+									<col width="80px" />
+									<col width="170px" />
+									<col width="70px" />
+								</colgroup>
+								<thead>
+									<tr>
+										<th scope="col"><input type="checkbox" id="mo-chk-all" /></th>
+										<th scope="col">수신처</th>
+										<th scope="col">수신처 코드</th>
+										<th scope="col">상태</th>
+										<th scope="col">접수기관</th>
+										<th scope="col">접수자/<br />처리자</th>
+										<th scope="col">일시</th>
+										<th scope="col">비고</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td><input type="checkbox" id="mo-chk-01" /></td>
+										<td class="left">재단법인원주문화재단이사장</td>
+										<td>B553420</td>
+										<td><span class="tag blue">접수</span></td>
+										<td class="left">전국지역문화재단연합회장</td>
+										<td>홍길동</td>
+										<td>2024-12-12 12:12:00</td>
+										<td><button type="button" class="buttons" data-intent="icon"><i class="ico send"></i></button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="mo-chk-02" /></td>
+										<td class="left">재단법인원주문화재단이사장</td>
+										<td>B553420</td>
+										<td><span class="tag green">수신</span></td>
+										<td class="left">전국지역문화재단연합회장</td>
+										<td>홍길동</td>
+										<td>2024-12-12 12:12:00</td>
+										<td><button type="button" class="buttons" data-intent="icon"><i class="ico send"></i></button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="mo-chk-03" /></td>
+										<td class="left">재단법인원주문화재단이사장</td>
+										<td>B553420</td>
+										<td><span class="tag blue">접수</span></td>
+										<td class="left">전국지역문화재단연합회장</td>
+										<td>홍길동</td>
+										<td>2024-12-12 12:12:00</td>
+										<td><button type="button" class="buttons" data-intent="icon"><i class="ico send"></i></button></td>
+									</tr>
+									<tr>
+										<td><input type="checkbox" id="mo-chk-04" /></td>
+										<td class="left">재단법인원주문화재단이사장</td>
+										<td>B553420</td>
+										<td><span class="tag green">수신</span></td>
+										<td class="left">전국지역문화재단연합회장</td>
+										<td>홍길동</td>
+										<td>2024-12-12 12:12:00</td>
+										<td><button type="button" class="buttons" data-intent="icon"><i class="ico send"></i></button></td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						
+					</div>
+					<div class="modal-button-group">
+						<button type="button" class="buttons" data-color="light-gray">취소</button>
+						<button type="button" class="buttons" data-intent="modal">확인</button>
+					</div>
+					<button type="button" class="modal-button-closed">Closed</button>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>

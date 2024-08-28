@@ -443,7 +443,9 @@ select {
 		&[data-width=w940]{
 			max-width:940px;
 		}
-
+		&[data-width=w1040]{
+			max-width:1040px;
+		}
 	}
 	.modal-button-group {
 		display: flex;
@@ -455,7 +457,11 @@ select {
 			min-width: 120px;
 		}
 	}
-
+	.modal-title {
+		@include font(20px, 24px, 500);
+		color:$title;
+		margin-bottom:16px;
+	}
 }
 .page-tab {
 	display: flex;
@@ -487,6 +493,10 @@ select {
 .tab-conts {
 	&.active {
 		display: block;
+	}
+	&[data-intent='no-bd']{
+		border:none;
+		padding:40px 0;
 	}
 	display: none;
 	padding:40px;
