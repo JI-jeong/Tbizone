@@ -1078,3 +1078,28 @@
 		padding:0;
 	}
 }
+
+.detail-wrap {
+	display: flex;
+	align-items: flex-start;
+	.detail-info {
+		width:400px;
+		.button-group {
+			margin-top:40px;
+			.buttons{
+				height:45px;
+			}
+		}
+	}
+	.detail-conts {
+		margin-left:40px;
+		flex:1;
+		border:1px solid #D9D9D9;
+		padding:40px;
+		.detail-title {
+			@include font(24px, 28px, 600);
+			color:#000;
+			margin-bottom:20px;
+		}
+	}
+}

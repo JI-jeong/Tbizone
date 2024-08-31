@@ -3155,4 +3155,31 @@ header .logo {
   height: 32px;
   width: 90px;
   padding: 0;
+}
+
+.detail-wrap {
+  display: flex;
+  align-items: flex-start;
+}
+.detail-wrap .detail-info {
+  width: 400px;
+}
+.detail-wrap .detail-info .button-group {
+  margin-top: 40px;
+}
+.detail-wrap .detail-info .button-group .buttons {
+  height: 45px;
+}
+.detail-wrap .detail-conts {
+  margin-left: 40px;
+  flex: 1;
+  border: 1px solid #D9D9D9;
+  padding: 40px;
+}
+.detail-wrap .detail-conts .detail-title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+  color: #000;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=Tbizone.css.map */
